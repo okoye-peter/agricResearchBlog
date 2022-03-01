@@ -8,7 +8,7 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
 
-class User extends Authenticatable
+class User extends Authenticatable implements MustVerifyEmail
 {
     use HasApiTokens, HasFactory, Notifiable;
 
@@ -20,6 +20,7 @@ class User extends Authenticatable
     protected $fillable = [
         'name',
         'email',
+        'specialty_id',
         'password',
     ];
 
@@ -41,4 +42,33 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    /**
+     * Get the user's file.
+     */
+    public function file()
+    {
+        return $this->morphOne(File::class, 'fileable');
+    }
+
+
+    /**
+     * Get the blogs for the user.
+     */
+    public function blogs()
+    {
+        return $this->hasMany(Blog::class);
+    }
+
+    /**
+     * Get the comments for the user.
+     */
+    // public function comments(){
+    //     return $this->hasMany(Comment::class);
+    // }
+
+    public function specialty()
+    {
+        return $this->belongsTo(Specialty::class);
+    }
 }
