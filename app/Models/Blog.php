@@ -30,6 +30,10 @@ class Blog extends Model
     }
 
     /**
-     * Get the user that owns the post.
+     * Get the blog's category.
      */
+    public function category()
+    {
+        return $this->belongsTo(Specialty::class);
+    }
 }

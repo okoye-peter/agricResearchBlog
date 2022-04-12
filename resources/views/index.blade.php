@@ -100,7 +100,7 @@
                 <div class="col-lg-4 col-md-6 col-sm-12">
                     <div class="product-box-layout4">
                         <div class="item-figure">
-                            <img src="img/product/product1.jpg" alt="Product">
+                            <img src="{{ asset('assets/uploads/images/steven-weeks-DUPFowqI6oI-unsplash.jpg') }}" alt="Product">
                             <a href="single-recipe1.html" class="item-dot">
                                 <span></span>
                                 <span></span>
@@ -130,7 +130,7 @@
                 <div class="col-lg-4 col-md-6 col-sm-12">
                     <div class="product-box-layout4">
                         <div class="item-figure">
-                            <img src="img/product/product2.jpg" alt="Product">
+                            <img src="{{ asset('assets/uploads/images/wilsan-u-BCATbA86WAw-unsplash.jpg') }}" alt="Product">
                             <a href="single-recipe1.html" class="item-dot">
                                 <span></span>
                                 <span></span>
@@ -160,7 +160,7 @@
                 <div class="col-lg-4 d-block d-md-none d-lg-block col-sm-12">
                     <div class="product-box-layout4">
                         <div class="item-figure">
-                            <img src="img/product/product3.jpg" alt="Product">
+                            <img src="{{ asset('assets/uploads/images/wilsan-u-BCATbA86WAw-unsplash.jpg') }}" alt="Product">
                             <a href="single-recipe1.html" class="item-dot">
                                 <span></span>
                                 <span></span>
@@ -202,7 +202,7 @@
                                     <h2 class="item-heading">TRENDING RECIPES</h2>
                                 </div>
                                 <div class="item-figure">
-                                    <img src="img/product/product4.jpg" alt="Product">
+                                    <img src="{{ asset('assets/uploads/images/zoe-schaeffer-D_VjFp1ds1Y-unsplash.jpg') }}" alt="Product">
                                     <a href="single-recipe1.html" class="item-dot">
                                         <span></span>
                                         <span></span>
@@ -235,7 +235,7 @@
                         <div class="col-md-6 col-sm-6 col-12">
                             <div class="product-box-layout4">
                                 <div class="item-figure">
-                                    <img src="img/product/product20.jpg" alt="Product">
+                                    <img src="{{ asset('assets/uploads/images/istockphoto-1297005217-170667a.jpg') }}" alt="Product">
                                     <a href="single-recipe1.html" class="item-dot">
                                         <span></span>
                                         <span></span>
@@ -265,7 +265,7 @@
                         <div class="col-md-6 col-sm-6 col-12">
                             <div class="product-box-layout4">
                                 <div class="item-figure">
-                                    <img src="img/product/product21.jpg" alt="Product">
+                                    <img src="{{ asset('assets/uploads/images/elaine-casap-qgHGDbbSNm8-unsplash.jpg') }}" alt="Product">
                                     <a href="single-recipe1.html" class="item-dot">
                                         <span></span>
                                         <span></span>
@@ -295,7 +295,7 @@
                         <div class="col-md-6 col-sm-6 col-12">
                             <div class="product-box-layout4">
                                 <div class="item-figure">
-                                    <img src="img/product/product22.jpg" alt="Product">
+                                    <img src="{{ asset('assets/uploads/images/istockphoto-1321479436-170667a.jpg') }}" alt="Product">
                                     <a href="single-recipe1.html" class="item-dot">
                                         <span></span>
                                         <span></span>
@@ -325,7 +325,7 @@
                         <div class="col-md-6 col-sm-6 col-12">
                             <div class="product-box-layout4">
                                 <div class="item-figure">
-                                    <img src="img/product/product23.jpg" alt="Product">
+                                    <img src="{{ asset('assets/uploads/images/markus-spiske-ZSZ6wzNU12Q-unsplash.jpg') }}" alt="Product">
                                     <a href="single-recipe1.html" class="item-dot">
                                         <span></span>
                                         <span></span>
@@ -355,7 +355,7 @@
                         <div class="col-md-6 col-sm-6 col-12">
                             <div class="product-box-layout4">
                                 <div class="item-figure">
-                                    <img src="img/product/product24.jpg" alt="Product">
+                                    <img src="{{ asset('assets/uploads/images/megan-thomas-xMh_ww8HN_Q-unsplash.jpg') }}" alt="Product">
                                     <a href="single-recipe1.html" class="item-dot">
                                         <span></span>
                                         <span></span>
@@ -385,7 +385,7 @@
                         <div class="col-md-6 col-sm-6 col-12">
                             <div class="product-box-layout4">
                                 <div class="item-figure">
-                                    <img src="img/product/product25.jpg" alt="Product">
+                                    <img src="{{ asset('assets/uploads/images/rajesh-ram-HOOKgN_zIY8-unsplash.jpg') }}" alt="Product">
                                     <a href="single-recipe1.html" class="item-dot">
                                         <span></span>
                                         <span></span>
@@ -420,8 +420,8 @@
                             <h3 class="item-heading">ABOUT ME</h3>
                         </div>
                         <div class="widget-about">
-                            <figure class="author-figure"><img src="img/figure/about.jpg" alt="about"></figure>
-                            <figure class="author-signature"><img src="img/figure/signature.png" alt="about"></figure>
+                            <figure class="author-figure"><img src="{{ asset('assets/uploads/images/rajesh-ram-HOOKgN_zIY8-unsplash.jpg') }}" alt="about"></figure>
+                            <figure class="author-signature"><img src="{{ asset('assets/uploads/images/rajesh-ram-HOOKgN_zIY8-unsplash.jpg') }}" alt="about"></figure>
                             <p>Fusce mauris auctor ollicituder teary iner hendrerit risusey aeenean rauctor pibus
                                 doloer.</p>
                         </div>
@@ -449,7 +449,7 @@
                             <ul class="block-list remove-5th-child-lg">
                                 <li class="single-item">
                                     <div class="item-img">
-                                        <a href="#"><img src="img/product/latest1.jpg" alt="Post"></a>
+                                        <a href="#"><img src="{{ asset('assets/uploads/images/rajesh-ram-HOOKgN_zIY8-unsplash.jpg') }}" alt="Post"></a>
                                         <div class="count-number">1</div>
                                     </div>
                                     <div class="item-content">
@@ -462,7 +462,7 @@
                                 </li>
                                 <li class="single-item">
                                     <div class="item-img">
-                                        <a href="#"><img src="img/product/latest2.jpg" alt="Post"></a>
+                                        <a href="#"><img src="{{ asset('assets/uploads/images/richard-bell-vpfEhvI5UE4-unsplash.jpg') }}" alt="Post"></a>
                                         <div class="count-number">2</div>
                                     </div>
                                     <div class="item-content">
@@ -475,7 +475,7 @@
                                 </li>
                                 <li class="single-item">
                                     <div class="item-img">
-                                        <a href="#"><img src="img/product/latest3.jpg" alt="Post"></a>
+                                        <a href="#"><img src="{{ asset('assets/uploads/images/roman-synkevych-fjj7lVpCxRE-unsplash.jpg') }}" alt="Post"></a>
                                         <div class="count-number">3</div>
                                     </div>
                                     <div class="item-content">
@@ -488,7 +488,7 @@
                                 </li>
                                 <li class="single-item">
                                     <div class="item-img">
-                                        <a href="#"><img src="img/product/latest4.jpg" alt="Post"></a>
+                                        <a href="#"><img src="{{ asset('assets/uploads/images/zoe-schaeffer-D_VjFp1ds1Y-unsplash.jpg') }}" alt="Post"></a>
                                         <div class="count-number">4</div>
                                     </div>
                                     <div class="item-content">
@@ -501,7 +501,7 @@
                                 </li>
                                 <li class="single-item">
                                     <div class="item-img">
-                                        <a href="#"><img src="img/product/latest2.jpg" alt="Post"></a>
+                                        <a href="#"><img src="{{ asset('assets/uploads/images/3.jpg') }}" alt="Post"></a>
                                         <div class="count-number">3</div>
                                     </div>
                                     <div class="item-content">
@@ -526,41 +526,13 @@
                         </div>
                         <div class="widget-categories">
                             <ul>
-                                <li>
-                                    <a href="#">BreakFast
-                                        <span>25</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">Lunch
-                                        <span>15</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">Pasta
-                                        <span>22</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">Dinner
-                                        <span>18</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">Dessert
-                                        <span>36</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">Drinks
-                                        <span>12</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">Fruits
-                                        <span>05</span>
-                                    </a>
-                                </li>
+                                @foreach($categories as $category)
+                                    <li>
+                                        <a href="#">{{ $category->name }}
+                                            <span>{{ $category->blogs->count() }}</span>
+                                        </a>
+                                    </li>
+                                @endforeach
                             </ul>
                         </div>
                     </div>

@@ -311,6 +311,9 @@
                                             <div class="cart-items">
                                                 <div class="cart-item">
                                                     <div class="cart-img" style="flex: 1;">
+                                                        <form action="" method="post">
+                                                            
+                                                        </form>
                                                         <a href="#" class="d-block logoutLink">
                                                             <i class="fas fa-sign-out-alt"></i> sign out
                                                         </a>
@@ -481,6 +484,26 @@
     <!-- Search Box End Here -->
     @guest
         <!-- Modal Start-->
+        {{-- send reset password link modal --}}
+        <div class="modal fade" id="passwordResetModal" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <div class="title-default-bold mb-none">Password Reset</div>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <form class="login-form" id="passwordResetForm" method="POST" data-parsley-validate>
+                            @csrf
+                            <input class="main-input-box" type="email" placeholder="Email" name="email" data-parsley-required data-parsley-type="email"/>
+                            <div class="inline-box mb-5 mt-4">
+                                <button class="btn-fill" type="submit" id="sendLinkBtn">Send Reset Link</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
         {{-- login Modal --}}
         <div class="modal fade" id="LoginModal" role="dialog">
             <div class="modal-dialog">
@@ -499,7 +522,7 @@
                                     <input id="modal-checkbox" type="checkbox" name="remember">
                                     <label for="modal-checkbox">Remember Me</label>
                                 </div>
-                                <label class="lost-password"><a href="#">Lost your password?</a></label>
+                                <label class="lost-password"><a href="#" id="showPasswordResetModal">Lost your password?</a></label>
                             </div>
                             <div class="inline-box mb-5 mt-4">
                                 <button class="btn-fill" type="submit" id="loginBtn">Login</button>
@@ -589,6 +612,7 @@
         <script>
             $('#loginForm').parsley();
             $('#registrationForm').parsley();
+            $('#passwordResetForm').parsley();
             $(document).ready(function () {
                 $('#showRegisterModal').on('click',function () {
                     $('#LoginModal').modal('hide');
@@ -597,6 +621,10 @@
                 $('#showLoginModal').on('click',function () {
                     $('#RegisterModal').modal('hide');
                     $('#LoginModal').modal('show');
+                });
+                $('#showPasswordResetModal').on('click',function () {
+                    $('#LoginModal').modal('hide');
+                    $('#passwordResetModal').modal('show');
                 });
             });
 
@@ -651,7 +679,6 @@
                 })
                 .catch(function (error) {
                     form.find('#LoginBtn').html('Login') 
-                    console.log(error.response)
                     if(error.response.status === 422){
                         var errors = error.response.data.errors;
                         Object.keys(error.response.data.errors).forEach(function (key) {
@@ -660,7 +687,24 @@
                         });
                     }
                 });
-            })
+            });
+            $('#passwordResetForm').on('submit', function(){
+                event.preventDefault();
+                var form = $(this);
+                form.find('#sendLinkBtn').html(`<img src="`+@json(asset('assets/images/loading.gif'))+`" style="height:1.5em" alt="loading..">`)
+                var formData = new FormData(form[0]);
+                axios.post(window.location.origin+'/forgot-password', formData)
+                .then(response => {
+                    form.find('#sendLinkBtn').html('Send Link')
+                    $('#passwordResetModal').modal('hide');
+                    swal({
+                        title: "Password Reset Link Sent",
+                        text: response.data.message,
+                        icon: "success",
+                        button: "Thanks",
+                    });
+                })
+            });
         </script>
     @endguest
 
