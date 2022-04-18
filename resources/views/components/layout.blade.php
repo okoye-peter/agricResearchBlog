@@ -51,6 +51,33 @@
             border-radius: 50%;
             margin-right: 1em;
         }
+       li .cart-wrap .cart-items{
+            padding: 0em;
+        }
+
+        li .cart-wrap .cart-items .cart-item{
+            border-bottom: 0px ;
+        }
+        li .cart-items .cart-item:hover{
+            background-color: #dfdfdf;
+        }
+        li .cart-items .cart-item a{
+            color: #000;
+            display: block;
+            width: 100%;
+            text-decoration: none;
+            padding: 0.5em 1em;
+        }
+        .logoutForm .logoutBtn{
+            width: 100%;
+            text-align: start;
+            border: 0px;
+            padding: 0;
+            outline: none;
+            cursor: pointer;
+            background: transparent;
+            padding: 0.5em 1em;
+        }
     </style>
 </head>
 
@@ -299,7 +326,7 @@
                                             <a href="#" class="fill-btn" data-toggle="modal" data-target="#RegisterModal">
                                                 <i class="flaticon-plus-1"></i>Register
                                             </a>
-                                        </li>
+                                        </li>3
                                     @endguest
                                     @auth
                                         <li>
@@ -310,15 +337,15 @@
                                             </div>
                                             <div class="cart-items">
                                                 <div class="cart-item">
+                                                    <a href="{{ route('blogs.create') }}" class="d-block"><i class="fa-solid fa-calendar-plus"></i> create blog</a>
+                                                </div>
+                                                <div class="cart-item">
                                                     <div class="cart-img" style="flex: 1;">
-                                                        <form action="" method="post">
-                                                            
-                                                        </form>
-                                                        <a href="#" class="d-block logoutLink">
-                                                            <i class="fas fa-sign-out-alt"></i> sign out
-                                                        </a>
-                                                        <form action="" method="post" class="logoutForm">
+                                                        <form action="{{ route('logout') }}" method="post" class="logoutForm">
                                                             @csrf
+                                                            <button type="submit" class="logoutBtn">
+                                                                <i class="fas fa-sign-out-alt"></i> sign out
+                                                            </button>
                                                         </form>
                                                     </div>
                                                 </div>
